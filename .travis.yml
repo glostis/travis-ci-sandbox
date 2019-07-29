@@ -4,6 +4,7 @@ addons:
   homebrew:
     packages:
       - fftw
+    update: true
 
 jobs:
   include:
