@@ -3,6 +3,6 @@ language: python
 jobs:
   include:
     - stage: test
-      script: python -c "import numpy; print(numpy.__version__)"
+      script: python -c "import requests; print(requests.__version__)"
     # - stage: deploy
     #   script: echo deploy stage 1
