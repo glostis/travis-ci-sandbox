@@ -1,11 +1,10 @@
-language: python
+os: osx
+language: generic
 
 jobs:
   include:
     - stage: test
       name: "Manual brew install"
-      os: osx
-      language: generic
       script: echo {} | jq .
     - stage: test
       name: "Addon brew install"
