@@ -1,14 +1,15 @@
 language: python
 
-addons:
-  homebrew:
-    packages:
-      - fftw
-    update: true
-
 jobs:
   include:
     - stage: test
+      name: "Manual brew install"
       os: osx
       language: generic
-      script: echo Hello
+      script: echo '{"foo": 0}' | jq .
+    - stage: test
+      name: "Addon brew install"
+      addons:
+        homebrew:
+          packages: jq
+      script: echo '{"foo": 0}' | jq .
