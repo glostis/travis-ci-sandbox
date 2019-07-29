@@ -3,8 +3,6 @@ language: python
 jobs:
   include:
     - stage: test
-      script: echo test stage 1
-    - stage: test
-      script: echo test stage 2
-    - stage: deploy
-      script: echo deploy stage 1
+      script: pip list
+    # - stage: deploy
+    #   script: echo deploy stage 1
