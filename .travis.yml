@@ -6,10 +6,10 @@ jobs:
       name: "Manual brew install"
       os: osx
       language: generic
-      script: echo '{"foo": 0}' | jq .
+      script: echo {} | jq .
     - stage: test
       name: "Addon brew install"
       addons:
         homebrew:
           packages: jq
-      script: echo '{"foo": 0}' | jq .
+      script: echo {} | jq .
