@@ -2,6 +2,7 @@ language: python
 
 before_install: pip install requests
 install: pip install rasterio
+script: echo HELLO
 
 jobs:
   include:
