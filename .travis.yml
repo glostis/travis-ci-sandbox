@@ -2,24 +2,14 @@ language: python
 
 before_install: pip install requests
 install: pip install rasterio
-script: echo HELLO
 
 jobs:
   include:
     - stage: test
-      before_install: skip
-      install: skip
-      script:
-        - python -c "import requests; print(requests.__version__)"
-        - python -c "import rasterio; print(rasterio.__version__)"
+      python: 2.7
+      script: python -v
     - stage: test
-      install: skip
-      script:
-        - python -c "import requests; print(requests.__version__)"
-        - python -c "import rasterio; print(rasterio.__version__)"
-    - stage: test
-      script:
-        - python -c "import requests; print(requests.__version__)"
-        - python -c "import rasterio; print(rasterio.__version__)"
+      python: 3.7
+      script: python -v
     # - stage: deploy
     #   script: echo deploy stage 1
