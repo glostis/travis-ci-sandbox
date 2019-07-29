@@ -1,15 +1,13 @@
 language: python
 
-before_install: pip install requests
-install: pip install rasterio
+addons:
+  homebrew:
+    packages:
+      - fftw
 
 jobs:
   include:
     - stage: test
-      python: 2.7
-      script: python -v
-    - stage: test
-      python: 3.7
-      script: python -v
-    # - stage: deploy
-    #   script: echo deploy stage 1
+      os: osx
+      language: generic
+      script: echo Hello
