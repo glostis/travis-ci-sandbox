@@ -22,7 +22,11 @@ jobs:
     #   script: echo {} | jq .
     - stage: test
       name: "bundle"
-      script: HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
-    - stage: test
-      name: "install"
-      script: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
+      script: 
+        - brew config
+        - brew update
+        - brew config
+        - brew bundle
+    # - stage: test
+    #   name: "install"
+    #   script: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
