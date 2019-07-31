@@ -3,20 +3,29 @@ language: generic
 
 jobs:
   include:
+    # - stage: test
+    #   name: "Manual brew install"
+    #   install: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
+    #   script: echo {} | jq .
+    # - stage: test
+    #   name: "Addon brew install"
+    #   addons:
+    #     homebrew:
+    #       packages: jq
+    #   script: echo {} | jq .
+    # - stage: test
+    #   name: "Addon brew update + install"
+    #   addons:
+    #     homebrew:
+    #       packages: jq
+    #       update: true
+    #   script: echo {} | jq .
     - stage: test
-      name: "Manual brew install"
-      install: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
-      script: echo {} | jq .
+      name: "rvm"
+      script: rvm $brew_ruby do brew bundle --verbose --global
     - stage: test
-      name: "Addon brew install"
-      addons:
-        homebrew:
-          packages: jq
-      script: echo {} | jq .
+      name: "no rvm"
+      script: brew bundle --verbose --global
     - stage: test
-      name: "Addon brew update + install"
-      addons:
-        homebrew:
-          packages: jq
-          update: true
-      script: echo {} | jq .
+      name: "no rvm"
+      script: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
