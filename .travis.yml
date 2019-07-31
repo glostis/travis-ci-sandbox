@@ -21,11 +21,8 @@ jobs:
     #       update: true
     #   script: echo {} | jq .
     - stage: test
-      name: "rvm"
-      script: rvm $brew_ruby do brew bundle --verbose --global
+      name: "bundle"
+      script: HOMEBREW_NO_AUTO_UPDATE=1 brew bundle
     - stage: test
-      name: "no rvm"
-      script: brew bundle --verbose --global
-    - stage: test
-      name: "no rvm"
+      name: "install"
       script: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
