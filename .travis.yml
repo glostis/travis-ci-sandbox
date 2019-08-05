@@ -1,32 +1,11 @@
 os: osx
 language: generic
 
+script: brew --version
+
 jobs:
   include:
-    # - stage: test
-    #   name: "Manual brew install"
-    #   install: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
-    #   script: echo {} | jq .
-    # - stage: test
-    #   name: "Addon brew install"
-    #   addons:
-    #     homebrew:
-    #       packages: jq
-    #   script: echo {} | jq .
-    # - stage: test
-    #   name: "Addon brew update + install"
-    #   addons:
-    #     homebrew:
-    #       packages: jq
-    #       update: true
-    #   script: echo {} | jq .
-    - stage: test
-      name: "bundle"
-      script: 
-        - brew config
-        - brew update
-        - brew config
-        - brew bundle
-    # - stage: test
-    #   name: "install"
-    #   script: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
+    - name: "osx_image: xcode11"
+      osx_image: xcode11
+    - name: "osx_image: xcode10"
+      osx_image: xcode10
