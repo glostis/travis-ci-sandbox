@@ -1,7 +1,9 @@
 os: osx
 language: generic
 
-script: brew --version
+script:
+  - brew --version
+  - brew bundle
 
 jobs:
   include:
