@@ -13,7 +13,7 @@ jobs:
         - provider: pypi
           user: glostis
           password:
-            blabla
+            secure: "iO46xLhGCvVnpYbD3zo4Qu0Cj5e84o5r15/Qlfub8+fbiqv6kzZ7FWInu6madNXvx7CLiaBzTl97Sb/iixkcxdTx303y706FWyuS/Qv71l+kolPOgIzEm7KdmnRD5dcUZ63DRlEiYModsnQgqBLBBuDDi5ItNN1zVEock9cmSzPGIK324h4Qd8VI78+lSE7x1NbNro9dBoDXlydkajknCBLgHiRcwxpk6rimaJQYgcQOndO9gWIguDIKAzsw9H8i6fyIrBpFO9iOwBq3AywC+Bns7EdGwKzhRUYFtCmdNBBOMBT66pWNnljb2orP/5udpVel3LnnY3+85ShAVx+N+hX81HTmPIypS5ti4p/YywBMAufHg+YhDdcfwC3yoeMJ29u8/IuZRXnAuLliteytb0M5ccpklbh/XMNv/DGpTF7nR7IOdJy7p6rlwkpUjNl3o0UsP0GzL01KQIq4OLmIDCfjojKJKwn66tfO9NwPhBjcCINoiB+amR1FspU7vSsL/b23I2wlIvPZEhHkyvfOdg5Se9LHi7g4LkW33oywcKoyztHwq1ku54IqxL7xeixvtx73DOuL3bdX0+Y0/9W7M7emgk+QuhFbOOwivBspgLwcgF6O6k8Oi6VVBAopGNGc8BPqdHNf5yxEBbgNqExV3xzfvAKBmLraUolEflHBaXE="
           server: https://test.pypi.org/legacy/
           on:
             tags: true
